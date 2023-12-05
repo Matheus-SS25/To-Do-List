@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.to_do_list"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.to_do_list"
@@ -33,6 +33,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    //Ativa o View Binding
+    viewBinding{
+        enable = true
+    }
+
 }
 
 dependencies {

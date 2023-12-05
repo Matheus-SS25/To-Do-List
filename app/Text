@@ -1,5 +1,13 @@
 Versionamento
 
-Initial commit - 4/12/2023
+Initial commit - 04/12/2023
 -Início do projeto, e a abertura do repositorio
 -Mudança do logo
+
+0.1.0 - 05/12/2023
+- Enable View binding on build.gradle, e mudança de compileSdk para 34
+- Criação e finalização do Splash e do activity_splash, criando assim um splash de 4 segundos com logo e titulo
+- Definição do layout principal no activity_main
+- Criação e Inicio da criação do card view para novas tarefas, task_item_cell
+
+-Testes: Dificulade de implementar o splash inicialmente, a tela splash não dava lugar a tela principal. Foi resolvido.
