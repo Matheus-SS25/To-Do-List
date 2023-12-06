@@ -4,17 +4,18 @@ Initial commit - 04/12/2023
 -Início do projeto, e a abertura do repositorio
 -Mudança do logo
 
-0.1.0 - 05/12/2023
+0.1.1 - 05/12/2023
 - Enable View binding on build.gradle, e mudança de compileSdk para 34
 - Criação e finalização da activity Splash e do layout activity_splash, criando assim um splash de 4 segundos com logo e titulo
 - Definição do layout principal no activity_main
 - Criação e Inicio do layout Card View para as tarefas, task_item_cell
 
--Testes: Dificuldade de implementar o splash inicialmente, a tela splash não dava lugar a tela principal. Erro foi resolvido.(0.0.1)
+*Testes - Dificuldade de implementar o splash inicialmente, a tela splash não dava lugar a tela principal. Erro foi resolvido.(0.0.1)
 
 0.2.2 - 06/12/2023
-- Botão flutuante de apagar foi mudado de Extended Floating Action Button para Floating Action Button devido a conflito com Botão flutuante de Nova Tarefa (0.0.2)
 - Finalização do layout do Card View utilizado para os item "Tarefa"
 - Criação e Finalização do layout utilizado para o Bottom Sheet que cria e edita as tarefas
 - Finalização de todos os layouts
-- Criação da Classe TaskItem, responsável pro definir as variaveis de atributos de uma tarefa
+- Criação da Classe TaskItem, responsável pro definir as variáveis de atributos de uma tarefa
+
+* Botão flutuante de apagar foi mudado de Extended Floating Action Button para Floating Action Button (0.0.2)

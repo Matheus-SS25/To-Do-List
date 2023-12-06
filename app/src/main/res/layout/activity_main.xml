@@ -15,9 +15,9 @@
 
     <!--Botão de nova tarefa-->
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/newTaskButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/newTaskButton"
         android:text="@string/nova_tarefa"
         android:textColor="@color/white"
         app:icon="@drawable/round_add_task_24"
@@ -30,17 +30,20 @@
         />
 
     <!--Botão de deletar tarefas concluídas-->
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/deleteButton"
+        android:textColor="@color/white"
+        app:shapeAppearance="?attr/shapeAppearance"
         app:backgroundTint="@color/dark_blue"
-        app:icon="@drawable/delete_24"
-        app:iconTint="@color/white"
+        app:srcCompat="@drawable/delete_24"
+        app:tint="@color/white"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:padding="5dp"
         android:layout_margin="20dp"
+        android:contentDescription="@string/apagar"
         />
 
 </RelativeLayout>

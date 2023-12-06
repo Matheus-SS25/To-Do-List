@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">To-Do-List</string>
     <string name="nova_tarefa">Nova Tarefa</string>
+    <string name="checkbox">checkbox</string>
+    <string name="place_holder">Place Holder</string>
+    <string name="apagar">Apagar</string>
+    <string name="desc">Descrição</string>
+    <string name="nome">Nome</string>
+    <string name="selecionar_hor_rio">Selecionar Horário</string>
+    <string name="salvar">Salvar</string>
 </resources>
