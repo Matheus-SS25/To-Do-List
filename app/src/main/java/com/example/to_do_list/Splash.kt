@@ -15,7 +15,7 @@ class Splash : AppCompatActivity() {
 
         //Looper que inicia o Main Activity apos 4 segundos
         Handler(Looper.getMainLooper()).postDelayed({
-            val splash = Intent(this, MainActivity::class.java)
+            val splash = Intent(this, MainActivity::class.java) // E atribuído a variavel splash o  Intent que iniciara a atividade Main Activity
             startActivity(splash) //Inicia a Activity de acordo com a variavel splash
         },4000) //daley de 4 segundos
     }
