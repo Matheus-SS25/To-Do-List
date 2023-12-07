@@ -14,8 +14,14 @@ Initial commit - 04/12/2023
 
 0.2.2 - 06/12/2023
 - Finalização do layout do Card View utilizado para os item "Tarefa"
-- Criação e Finalização do layout utilizado para o Bottom Sheet que cria e edita as tarefas
+- Criação do fragmento (fragment_new_task_sheet e NewTaskSheet) e Finalização do layout utilizado para o Bottom Sheet que cria e edita as tarefas
 - Finalização de todos os layouts
 - Criação da Classe TaskItem, responsável pro definir as variáveis de atributos de uma tarefa
 
 * Botão flutuante de apagar foi mudado de Extended Floating Action Button para Floating Action Button (0.0.2)
+
+0.3.2 - 07/12/2023
+- Criação finalização da classe que modela os dados das variáveis em TaskItem e armazena em uma list mutável. TaskViewModel
+-Criação de um interface click listener para o RecyclerView
+- Criação do Adapter e ViewHolder (TaskItemAdapter, TaskViewHolder) para o RecyclerView
+- Finalização da activity do Bottom Sheet (NewTaskSheet)
