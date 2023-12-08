@@ -27,7 +27,7 @@ class TaskViewModel : ViewModel() {
         task.dueTime = dueTime
         taskItems.postValue(list) //Posta novamente a lista
     }
-
+    //Função para setar a tarefa como completa
     fun setCompleted(taskItem: TaskItem){
         val list = taskItems.value //Variavel com o valor da lista taskItem
         val task = list!!.find{it.id == taskItem.id}!!//Procura nas lista o id e attribute a lista correspondente a variavel task

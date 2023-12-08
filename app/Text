@@ -25,3 +25,16 @@ Initial commit - 04/12/2023
 -Criação de um interface click listener para o RecyclerView
 - Criação do Adapter e ViewHolder (TaskItemAdapter, TaskViewHolder) para o RecyclerView
 - Finalização da activity do Bottom Sheet (NewTaskSheet)
+
+0.4.2 - 08/12/2023
+- Finalização do Adapter e ViewHolder (TaskItemAdapter, TaskViewHolder)
+- Implementação da NewTaskSheet
+- Implementação no MainActivity
+
+-Testes: As funções do app de criar e editar tarefas estão funcionando
+        Problemas:
+        -A função de excluir ainda não foi criada
+        -Não a como desselecionar uma tarefa como não completa
+
+        Bugs Detectados:
+        -Tarefas editadas quando completas, ainda são tratadas como completas
