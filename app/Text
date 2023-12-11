@@ -34,7 +34,11 @@ Initial commit - 04/12/2023
 -Testes: As funções do app de criar e editar tarefas estão funcionando
         Problemas:
         -A função de excluir ainda não foi criada
-        -Não a como desselecionar uma tarefa como não completa
+        -Não a como tornar uma tarefa completa, em incompleta
 
         Bugs Detectados:
         -Tarefas editadas quando completas, ainda são tratadas como completas
+
+0.5.3 - 11/12/2023
+- Implementação de opção de tornar uma tarefa incompleta.
+- Tarefas completas não continuam completas quando editadas (0.0.3)

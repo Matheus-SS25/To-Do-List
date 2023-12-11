@@ -54,7 +54,7 @@ class NewTaskSheet(var taskItem: TaskItem?): BottomSheetDialogFragment() {
             updateTimeButtonText()
         }
         val dialog = TimePickerDialog(activity,listener,dueTime!!.hour,dueTime!!.minute,true)
-        dialog.setTitle("Task Due")
+        dialog.setTitle("Selecionar Horário")
         dialog.show()
     }
 
@@ -65,7 +65,7 @@ class NewTaskSheet(var taskItem: TaskItem?): BottomSheetDialogFragment() {
             val newTask = TaskItem(name,desc,dueTime,null)
             taskViewModel.addTaskItem(newTask)
         } else{
-            taskViewModel.updateTaskItem(taskItem!!.id,name,desc,dueTime)
+            taskViewModel.updateTaskItem(taskItem!!.id,name,desc,dueTime, completedDate = null)
         }
         binding.name.setText("")
         binding.desc.setText("")

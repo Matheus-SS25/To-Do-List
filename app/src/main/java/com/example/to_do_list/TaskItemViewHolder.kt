@@ -24,7 +24,7 @@ class TaskItemViewHolder (
         binding.completeButton.setColorFilter(taskItem.imageColor(context)) //Muda a cor da imagem do botão de conclusão de tarefa de acordo com a função imageColor
 
         binding.completeButton.setOnClickListener{
-            clickListener.completeTaskItem(taskItem)
+           if(taskItem.completedDate == null) clickListener.completeTaskItem(taskItem) else clickListener.uncompleteTaskItem(taskItem)
         }
         binding.taskCellContainer.setOnClickListener{
             clickListener.editTaskItem(taskItem)

@@ -16,9 +16,9 @@ class TaskItem (
     var id: UUID = UUID.randomUUID() //Cria o id randomicamente
 )
 {
-    fun isCompleted() = completedDate != null //Funçao define que uma tarefa completada tem que ser diferente de null
+    fun isCompleted() = completedDate != null //Funçao define que uma tarefa completada tem que ser diferente de null na variavel completedDate
     fun imageResource() : Int = if (isCompleted()) R.drawable.check_box_24 else R.drawable.check_box_blank_24 //Muda a imagem do botão se a tarefas for definida como completa
-    fun imageColor(context:Context): Int = if (isCompleted()) azul(context) else preto(context) //Muda a cor da imagem do botão de acordo com seu estado
+    fun imageColor(context:Context): Int = if (isCompleted()) azul(context) else preto(context) //Muda a cor da imagem do botão de acordo com seu estado utilizando as funções abaixo
 
     private fun azul(context:Context) = ContextCompat.getColor(context, R.color.dark_blue)
     private fun preto (context:Context) = ContextCompat.getColor(context, R.color.black)

@@ -19,13 +19,14 @@ class TaskViewModel : ViewModel() {
         taskItems.postValue(list) //Posta a nova tarefa a lista
     }
     //Função para o update da tarefa
-    fun updateTaskItem(id : UUID, name : String, desc: String, dueTime: LocalTime?){
+    fun updateTaskItem(id : UUID, name : String, desc: String, dueTime: LocalTime?,completedDate: LocalDate?){
         val list = taskItems.value //Variavel com o valor da lista taskItem
         val task = list!!.find{it.id == id}!! //Procura nas listas o id e attribute a lista correspondente a variavel task
         task.name = name //Atribui os valores passados a os capos da lista
         task.desc = desc
         task.dueTime = dueTime
-        taskItems.postValue(list) //Posta novamente a lista
+        task.completedDate = null
+        taskItems.postValue(list)
     }
     //Função para setar a tarefa como completa
     fun setCompleted(taskItem: TaskItem){
@@ -35,5 +36,12 @@ class TaskViewModel : ViewModel() {
             task.completedDate = LocalDate.now() //Atribui a data de conclusão atual
         taskItems.postValue(list) //Posta a modificação da tarefa a lista
     }
-
+    //Função para setar a tarefa como incompleta
+    fun setUncompleted(taskItem: TaskItem){
+        val list = taskItems.value //Variavel com o valor da lista taskItem
+        val task = list!!.find{it.id == taskItem.id}!!//Procura nas lista o id e attribute a lista correspondente a variavel task
+        if (task.completedDate != null) //Checa se a  uma data de conclusão
+            task.completedDate = null//Atribui null a data de conclusão
+        taskItems.postValue(list) //Posta a modificação da tarefa a lista
+    }
 }
