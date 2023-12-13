@@ -45,4 +45,12 @@ Initial commit - 04/12/2023
 
 0.6.3 - 13/12/2023
 -Botão de deletar todas as tarefas completas foi removido
--Botão de deketar foi incluido a taskcell e implementado para apagar tarefas individuais
+-Botão de deletar foi incluído a taskcell e implementado para apagar tarefas individuais
+
+Testes:
+-Botão de apagar tarefa individuais foi testado e funciona
+
+        Problemas:
+        - Necessário criar uma função no aplicativo para demonstra a descrição da tarefa e a data de conclusão
+        - Tarefas não permanecem salvas após o aplicativo for fechado
+        - Não a notificações para tarefas vencidas ou próximas de vencer, mais e necessário implementar forma de armazenar as tarefas primeiro.

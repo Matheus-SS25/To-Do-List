@@ -22,12 +22,12 @@ class NewTaskSheet(var taskItem: TaskItem?): BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         val activity = requireActivity()
 
-        if (taskItem != null){
+        if (taskItem != null){  //Checa se a uma tarefa ao abrir o bottom sheet e se hover muda o titulo
             binding.taskTitle.text = "Editar a Tarefa"
             val editable = Editable.Factory.getInstance()
-            if(taskItem!!.dueTime != null){
+            if(taskItem!!.dueTime != null){ //Se a tarefa conter um horario a ser comprido e mostra o horario no lugar do texto do botão
                 dueTime = taskItem!!.dueTime!!
-                updateTimeButtonText()
+                updateTimeButtonText() //Função que muda o botão
             }
         } else {
             binding.taskTitle.text = "Nova Tarefa"
@@ -46,33 +46,33 @@ class NewTaskSheet(var taskItem: TaskItem?): BottomSheetDialogFragment() {
         return binding.root
     }
 
-    private fun openTimePiker() {
-        if (dueTime==null)
-            dueTime = LocalTime.now()
-        val listener = TimePickerDialog.OnTimeSetListener{_,selectedHour,selectedMinute ->
-            dueTime = LocalTime.of(selectedHour,selectedMinute)
-            updateTimeButtonText()
+    private fun openTimePiker() { //Função para abrio o seletor de horario
+        if (dueTime==null) //se nao ouver horario selecionado
+            dueTime = LocalTime.now()// define com o horario atual
+        val listener = TimePickerDialog.OnTimeSetListener {_,selectedHour,selectedMinute ->
+            dueTime = LocalTime.of(selectedHour,selectedMinute) // atribui o valor selecionado a variavel
+            updateTimeButtonText() //Muda o botão para mostrar o horario selecionado
         }
-        val dialog = TimePickerDialog(activity,listener,dueTime!!.hour,dueTime!!.minute,true)
-        dialog.setTitle("Selecionar Horário")
+        val dialog = TimePickerDialog(activity,listener,dueTime!!.hour,dueTime!!.minute,true) // Cria o dialogo para selecionar o horário
+        dialog.setTitle("Selecionar Horário") //Define o titulo do dialogo
         dialog.show()
     }
 
     private fun saveAction() {
         val name = binding.name.text.toString()
         val desc = binding.desc.text.toString()
-        if(taskItem == null){
-            val newTask = TaskItem(name,desc,dueTime,null)
-            taskViewModel.addTaskItem(newTask)
+        if(taskItem == null){ // Checa se a tarefa e nova
+            val newTask = TaskItem(name,desc,dueTime,null) // Atribui os valores da nova Classe TaskItem a variavel newTask
+            taskViewModel.addTaskItem(newTask) //Adiciona a nova tarefa (newTask) com a função addTaskItem contida em TaskViewModel
         } else{
             taskViewModel.updateTaskItem(taskItem!!.id,name,desc,dueTime, completedDate = null)
         }
         binding.name.setText("")
         binding.desc.setText("")
-        dismiss()
+        dismiss() //Fecha o fragmento
     }
 
     private fun updateTimeButtonText() {
-        binding.timePickerButton.text = String.format("%02d:%02d",dueTime!!.hour,dueTime!!.minute)
+        binding.timePickerButton.text = String.format("%02d:%02d",dueTime!!.hour,dueTime!!.minute) //Muda o testo do botão de selecionar horario
     }
 }

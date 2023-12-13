@@ -11,6 +11,7 @@ class TaskItemViewHolder (
     private val binding: TaskItemCellBinding,
     private val clickListener: TaskItemClickListener
 ):RecyclerView.ViewHolder(binding.root) {
+
     private val timeFormat=DateTimeFormatter.ofPattern("HH:mm") // Define o padrão utilizado para o horário
 
     fun bindTaskItem(taskItem: TaskItem){
@@ -27,7 +28,7 @@ class TaskItemViewHolder (
            if(taskItem.completedDate == null) clickListener.completeTaskItem(taskItem) else clickListener.uncompleteTaskItem(taskItem)
         }
         binding.taskCellContainer.setOnClickListener{
-            clickListener.editTaskItem(taskItem)
+            clickListener.editTaskItem(taskItem) //Abre a função de editar ao clicar na tarefa
         }
         binding.deleteButton.setOnClickListener{
             clickListener.deleteTaskItem(taskItem)

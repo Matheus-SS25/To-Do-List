@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity(), TaskItemClickListener {
     override fun uncompleteTaskItem(taskItem: TaskItem) {
         taskViewModel.setUncompleted(taskItem)
     }
-
     override fun deleteTaskItem(taskItem: TaskItem) {
         taskViewModel.deleteTask(taskItem)
     }

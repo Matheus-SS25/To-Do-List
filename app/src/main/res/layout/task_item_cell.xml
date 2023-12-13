@@ -53,8 +53,8 @@
             android:layout_gravity="center"
             android:scaleY="1.5"
             android:scaleX="1.5"
-            android:contentDescription="@string/checkbox"
-            android:layout_marginHorizontal="15dp"
+            android:contentDescription="@string/delete"
+            android:layout_marginHorizontal="5dp"
             android:src="@drawable/delete_24"
             android:backgroundTint="@android:color/transparent"
             />

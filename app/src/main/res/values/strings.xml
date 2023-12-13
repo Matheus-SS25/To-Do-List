@@ -8,4 +8,5 @@
     <string name="nome">Nome</string>
     <string name="selecionar_hor_rio">Selecionar Horário</string>
     <string name="salvar">Salvar</string>
+    <string name="delete">delete</string>
 </resources>
