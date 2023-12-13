@@ -29,6 +29,9 @@ class TaskItemViewHolder (
         binding.taskCellContainer.setOnClickListener{
             clickListener.editTaskItem(taskItem)
         }
+        binding.deleteButton.setOnClickListener{
+            clickListener.deleteTaskItem(taskItem)
+        }
         if (taskItem.dueTime != null) //Checa se a um horário para conclusão e coloca dentro do formato
             binding.dueTime.text = timeFormat.format(taskItem.dueTime) else
                 binding.dueTime.text = "" // Se não a nenhum horário de conclusão deixa o campo em branco

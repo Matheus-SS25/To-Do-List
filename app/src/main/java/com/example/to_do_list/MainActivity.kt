@@ -2,6 +2,7 @@ package com.example.to_do_list
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.to_do_list.databinding.ActivityMainBinding
@@ -38,5 +39,9 @@ class MainActivity : AppCompatActivity(), TaskItemClickListener {
     }
     override fun uncompleteTaskItem(taskItem: TaskItem) {
         taskViewModel.setUncompleted(taskItem)
+    }
+
+    override fun deleteTaskItem(taskItem: TaskItem) {
+        taskViewModel.deleteTask(taskItem)
     }
 }

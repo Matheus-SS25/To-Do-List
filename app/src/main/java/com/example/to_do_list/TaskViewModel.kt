@@ -2,6 +2,7 @@ package com.example.to_do_list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.loader.content.AsyncTaskLoader
 import java.time.LocalDate
 import java.time.LocalTime
 import java.util.UUID
@@ -43,5 +44,13 @@ class TaskViewModel : ViewModel() {
         if (task.completedDate != null) //Checa se a  uma data de conclusão
             task.completedDate = null//Atribui null a data de conclusão
         taskItems.postValue(list) //Posta a modificação da tarefa a lista
+    }
+    fun deleteTask(taskItem: TaskItem) {
+        val list = taskItems.value!!
+        val taskIndex = list.indexOf(taskItem)
+        if (taskIndex != -1) {
+            list.removeAt(taskIndex)
+            taskItems.postValue(list)
+        }
     }
 }
